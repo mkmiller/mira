@@ -1,0 +1,52 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.nav-wrapper {
+  width: 100%;
+  background: #444;
+}
+
+.nav-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-menu li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 1em;
+}
+
+.sub-menu {
+  position: absolute;
+  display: none;
+  background: #333;
+  z-index: 2;
+  top: 2em;
+  width: 7em;
+  margin-left: -5em;
+}
+
+.nav-menu ul li:hover > ul {
+  display: inline-block;
+}
+
+.dropdown:after {
+  content: "\25BC"; /* down arrow */
+  font-size: .6em;
+  color: #DDD;
+  display: inline;
+  position: relative;
+}
+
+a { text-decoration: none; color: #DDD }
+a:visited { text-decoration: none; color: #DDD; }
+a:hover { text-decoration: none; color:white; }
+a:focus { text-decoration: none; color:white; }
+a:hover, a:active { text-decoration: none; color:white }

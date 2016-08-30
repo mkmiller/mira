@@ -9,6 +9,70 @@
   </head>
 
   <body>
+    <div class='nav-wrapper'>
+      <nav class='nav-menu'>
+        <ul class='clearfix'>
+          <li>
+            <%= link_to root_path do %>
+              MIRA
+            <% end %>
+          </li>
+          <li class='dropdown'>
+            <%= link_to root_path do %>
+              Upcoming Comics
+            <% end %>
+            <ul class='sub-menu' style='margin-left: -8em;'>
+              <% %w(A B C).each do |name| %>
+                <li>
+                  <%= link_to root_path do %>
+                    Comic <%= name %>
+                  <% end %>
+                </li>
+              <% end %>
+            </ul>
+          </li>
+          <li class='dropdown'>
+            <%= link_to root_path do %>
+               Webcomics
+            <% end %>
+            <ul class='sub-menu'>
+              <% %w(A B C).each do |name| %>
+                <li>
+                  <%= link_to root_path do %>
+                    Webcomic <%= name %>
+                  <% end %>
+                </li>
+              <% end %>
+            </ul>
+          </li>
+          <li class='dropdown'>
+            <%= link_to root_path do %>
+              Anthologies
+            <% end %>
+            <ul class='sub-menu'>
+              <% %w(A B C).each do |name| %>
+                <li>
+                  <%= link_to root_path do %>
+                    Anthology <%= name %>
+                  <% end %>
+                </li>
+              <% end %>
+            </ul>
+          </li>
+          <li>
+            <%= link_to root_path do %>
+              Bio
+            <% end %>
+          </li>
+          <li>
+            <%= link_to root_path do %>
+              Contact
+            <% end %>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
     <%= yield %>
   </body>
 </html>
