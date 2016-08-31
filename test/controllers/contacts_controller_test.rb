@@ -1,8 +1,8 @@
 require 'test_helper'
 
 # Contact route testing
-class ContactControllerTest < ActionDispatch::IntegrationTest
-  test 'can hit index' do
+class ContactsControllerTest < ActionDispatch::IntegrationTest
+  test 'can hit show' do
     get '/contact'
 
     assert_response :success
