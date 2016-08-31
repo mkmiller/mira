@@ -13,61 +13,43 @@
       <nav class='nav-menu'>
         <ul class='clearfix'>
           <li>
-            <%= link_to root_path do %>
-              MIRA
-            <% end %>
+            <%= link_to 'MIRA', root_path %>
           </li>
           <li class='dropdown'>
-            <%= link_to comics_path do %>
-              Upcoming Comics
-            <% end %>
+            <%= link_to 'Upcoming Comics', comics_path %>
             <ul class='sub-menu' style='margin-left: -8em;'>
-              <% %w(A B C).each do |name| %>
+              <% Comic.all.each do |comic| %>
                 <li>
-                  <%= link_to root_path do %>
-                    Comic <%= name %>
-                  <% end %>
+                  <%= link_to comic.name, comic_path(comic.id) %>
                 </li>
               <% end %>
             </ul>
           </li>
           <li class='dropdown'>
-            <%= link_to web_comics_path do %>
-               Webcomics
-            <% end %>
+            <%= link_to 'Webcomics', web_comics_path %>
             <ul class='sub-menu'>
-              <% %w(A B C).each do |name| %>
+              <% WebComic.all.each do |comic| %>
                 <li>
-                  <%= link_to root_path do %>
-                    Webcomic <%= name %>
-                  <% end %>
+                  <%= link_to comic.name, web_comic_path(comic.id) %>
                 </li>
               <% end %>
             </ul>
           </li>
           <li class='dropdown'>
-            <%= link_to anthologies_path do %>
-              Anthologies
-            <% end %>
+            <%= link_to 'Anthologies', anthologies_path %>
             <ul class='sub-menu'>
-              <% %w(A B C).each do |name| %>
+              <% Anthology.all.each do |comic| %>
                 <li>
-                  <%= link_to root_path do %>
-                    Anthology <%= name %>
-                  <% end %>
+                  <%= link_to comic.name, anthology_path(comic.id) %>
                 </li>
               <% end %>
             </ul>
           </li>
           <li>
-            <%= link_to bio_path do %>
-              Bio
-            <% end %>
+            <%= link_to 'Bio', bio_path %>
           </li>
           <li>
-            <%= link_to contact_path do %>
-              Contact
-            <% end %>
+            <%= link_to 'Contact', contact_path %>
           </li>
         </ul>
       </nav>

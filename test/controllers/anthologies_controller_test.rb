@@ -7,4 +7,10 @@ class AnthologiesControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
   end
+
+  test 'can hit show' do
+    get '/anthologies/1'
+
+    assert_response :success
+  end
 end
