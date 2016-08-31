@@ -20,3 +20,5 @@
 /config/cable.yml
 /config/database.yml
 /config/secrets.yml
+
+.DS_Store
