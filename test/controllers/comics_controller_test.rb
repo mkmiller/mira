@@ -9,7 +9,7 @@ class ComicsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'can hit show' do
-    get '/comics/1'
+    get '/comics/split'
 
     assert_response :success
   end

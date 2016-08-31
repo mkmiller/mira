@@ -4,6 +4,6 @@ class ComicsController < ApplicationController
   end
 
   def show
-    @comic = Comic.find(params[:id])
+    @comic = Comic.friendly.find(params[:id])
   end
 end
