@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+vendor_one:
   name: Comixology
   file: comixology.png
 
-two:
+vendor_two:
   name: RedStylo
   file: redstylo.png

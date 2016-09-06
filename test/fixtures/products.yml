@@ -1,7 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-comic_one:
-  name: Split
-  publisher:
-  role: writer
-  slug: split
+product_one:
+  url: fakeurl
+  comic: comic_one
+  vendor: vendor_one
