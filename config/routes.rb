@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :anthologies, only: [:index, :show]
   resource :bio, only: :show
   resources :comics, only: [:index, :show]
-  resource :contact, only: :show
+  resource :contacts, only: [:new, :create]
   resources :web_comics, only: [:index, :show]
 end

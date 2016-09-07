@@ -50,3 +50,7 @@ a:visited { text-decoration: none; color: #DDD; }
 a:hover { text-decoration: none; color:white; }
 a:focus { text-decoration: none; color:white; }
 a:hover, a:active { text-decoration: none; color:white }
+
+.hidden {
+  display: none;
+}
