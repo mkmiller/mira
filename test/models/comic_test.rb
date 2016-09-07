@@ -9,8 +9,10 @@ class ComicTest < ActiveSupport::TestCase
   end
 
   test 'can have products' do
-    comic_one = comics(:comic_one)
+    assert_equal 1, comics(:comic_one).products.count
+  end
 
-    assert_equal 1, comic_one.products.count
+  test 'can have artwork' do
+    assert_equal 1, comics(:comic_one).artworks.count
   end
 end

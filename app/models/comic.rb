@@ -5,5 +5,6 @@ class Comic < ApplicationRecord
 
   validates :name, :slug, presence: true
 
+  has_many :artworks
   has_many :products
 end
