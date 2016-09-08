@@ -3,8 +3,8 @@ require 'test_helper'
 # Product model tests
 class ProductTest < ActiveSupport::TestCase
   test 'can have vendor' do
-    product_one = products(:product_one)
+    product = products(:product_comic)
 
-    assert_equal 'Comixology', product_one.vendor.name
+    assert_equal 'Comixology', product.vendor.name
   end
 end

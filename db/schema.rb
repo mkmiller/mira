@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160906195537) do
+ActiveRecord::Schema.define(version: 20160908140541) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "anthologies", force: :cascade do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.string   "publisher"
+    t.datetime "published_at"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["slug"], name: "index_anthologies_on_slug", unique: true, using: :btree
+  end
 
   create_table "artworks", force: :cascade do |t|
     t.string   "file"
@@ -27,8 +37,10 @@ ActiveRecord::Schema.define(version: 20160906195537) do
     t.string   "publisher"
     t.string   "role"
     t.string   "slug"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "anthology_id"
+    t.datetime "published_at"
     t.index ["slug"], name: "index_comics_on_slug", unique: true, using: :btree
   end
 
@@ -48,8 +60,9 @@ ActiveRecord::Schema.define(version: 20160906195537) do
     t.string   "url"
     t.integer  "comic_id"
     t.integer  "vendor_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "anthology_id"
   end
 
   create_table "vendors", force: :cascade do |t|

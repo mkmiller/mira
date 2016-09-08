@@ -1,6 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-product_one:
-  url: fakeurl
+product_comic:
+  url: comic_url
   comic: comic_one
   vendor: vendor_one
+
+product_anthology:
+  url: anthology_url
+  anthology: anthology_one
+  vendor: vendor_two

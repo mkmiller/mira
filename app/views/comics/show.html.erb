@@ -1,6 +1,10 @@
 <h2><%= @comic.name %></h2>
 <div>
   Published by <%= @comic.publisher %>.
+  <% if @comic.anthology.present? %>
+    <br>
+    Featured in the <%= @comic.anthology.name %> Anthology.
+  <% end %>
 </div>
 <br>
 <% if @comic.artworks.present? %>

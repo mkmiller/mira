@@ -38,9 +38,9 @@
           <li class='dropdown'>
             <%= link_to 'Anthologies', anthologies_path %>
             <ul class='sub-menu'>
-              <% Anthology.all.each do |comic| %>
+              <% Anthology.all.each do |anthology| %>
                 <li>
-                  <%= link_to comic.name, anthology_path(comic.id) %>
+                  <%= link_to "The #{anthology.name} Anthology", anthology_path(anthology) %>
                 </li>
               <% end %>
             </ul>

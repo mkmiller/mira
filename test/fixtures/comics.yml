@@ -5,3 +5,10 @@ comic_one:
   publisher:
   role: writer
   slug: split
+
+comic_two:
+  name: AnthologyComic
+  publisher:
+  role:
+  slug: anthologycomic
+  anthology: anthology_one

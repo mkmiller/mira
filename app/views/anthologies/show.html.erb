@@ -1,1 +1,11 @@
-<h2><%= @anthology.name %></h2>
+<h2>The <%= @anthology.name %> Anthology</h2>
+
+<div>
+  Published by <%= @anthology.publisher %>.
+  <br>
+  <% comic = @anthology.comics.first %>
+  Features <%= comic.name %>.
+  <br>
+  <%= link_to image_tag(comic.artworks.first.file, alt: comic.name, height: '200'),
+      comic_path(comic) %>
+</div>

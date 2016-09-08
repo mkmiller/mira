@@ -2,4 +2,8 @@
 
 artwork_one:
   comic: comic_one
-  file: fake
+  file: file_one
+
+artwork_two:
+  comic: comic_two
+  file: file_two

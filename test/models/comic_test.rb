@@ -15,4 +15,8 @@ class ComicTest < ActiveSupport::TestCase
   test 'can have artwork' do
     assert_equal 1, comics(:comic_one).artworks.count
   end
+
+  test 'can have anthology' do
+    assert comics(:comic_two).anthology.present?
+  end
 end

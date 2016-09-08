@@ -3,5 +3,6 @@ class Product < ApplicationRecord
   validates :url, presence: true
 
   belongs_to :comic
+  belongs_to :anthology
   belongs_to :vendor
 end

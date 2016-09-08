@@ -1,1 +1,10 @@
-<h2>Anthologies yo</h2>
+<h2>Anthologies</h2>
+
+<% @anthologies.each do |anthology| %>
+  <% if anthology.comics.present? %>
+    <% anthology.comics.each do |comic| %>
+      <%= link_to image_tag(comic.artworks.first.file, alt: anthology.name, height: '200'),
+        anthology_path(anthology) %>
+    <% end %>
+  <% end %>
+<% end %>
