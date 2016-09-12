@@ -31,8 +31,12 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Friendly URLs
 gem 'friendly_id', '~> 5.1.0'
+# Friendly contact form
 gem 'mail_form'
+
+gem 'browserify-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

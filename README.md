@@ -6,5 +6,12 @@
 
 * FriendlyId 5.1.0
 
+* Browserify Rails
+
 * ENV variables
 CONTACT_EMAIL - the email to which contact forms are sent
+
+* Setup
+$ bundle install
+$ npm install
+$ rails server
