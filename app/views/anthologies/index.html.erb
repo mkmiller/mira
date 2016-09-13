@@ -1,10 +1,18 @@
-<h2>Anthologies</h2>
+<div class="row">
+  <div class="column">
+    <h2>Anthologies</h2>
+  </div>
+</div>
 
-<% @anthologies.each do |anthology| %>
-  <% if anthology.comics.present? %>
-    <% anthology.comics.each do |comic| %>
-      <%= link_to image_tag(comic.artworks.first.file, alt: anthology.name, height: '200'),
+<div class="row">
+  <div class="column">
+    <% @anthologies.each do |anthology| %>
+      <% if anthology.comics.present? %>
+      <% anthology.comics.each do |comic| %>
+        <%= link_to image_tag(comic.artworks.first.file, alt: anthology.name, height: '200'),
         anthology_path(anthology) %>
+      <% end %>
     <% end %>
   <% end %>
-<% end %>
+  </div>
+</div>

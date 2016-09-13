@@ -1,8 +1,16 @@
-<h2>Comics</h2>
+<div class="row">
+  <div class="column">
+    <h2>Comics</h2>
+  </div>
+</div>
 
-<% @comics.each do |comic| %>
-  <% if comic.artworks.first.present? %>
-    <%= link_to image_tag(comic.artworks.first.file, alt: comic.name, height: '200'),
-        comic_path(comic) %>
-  <% end %>
-<% end %>
+<div class="row">
+  <div class="column">
+    <% @comics.each do |comic| %>
+      <% if comic.artworks.first.present? %>
+        <%= link_to image_tag(comic.artworks.first.file, alt: comic.name, height: '200'),
+            comic_path(comic) %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

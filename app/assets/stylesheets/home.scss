@@ -2,55 +2,82 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.clearfix:after {
-  content: "";
-  display: table;
-}
+a { text-decoration: none; color: #9b4dca;}
+a:visited { text-decoration: none; color: #9b4dca; }
 
-.nav-wrapper {
-  width: 100%;
-  background: #444;
+a:hover, a:focus, a:active {
+  color: #FFF;
 }
-
-.nav-menu {
-  position: relative;
-  display: inline-block;
-}
-
-.nav-menu li {
-  display: inline;
-  list-style-type: none;
-  padding-right: 1em;
-}
-
-.sub-menu {
-  position: absolute;
-  display: none;
-  background: #333;
-  z-index: 2;
-  top: 2em;
-  width: 7em;
-  margin-left: -5em;
-}
-
-.nav-menu ul li:hover > ul {
-  display: inline-block;
-}
-
-.dropdown:after {
-  content: "\25BC"; /* down arrow */
-  font-size: .6em;
-  color: #DDD;
-  display: inline;
-  position: relative;
-}
-
-a { text-decoration: none; color: #DDD }
-a:visited { text-decoration: none; color: #DDD; }
-a:hover { text-decoration: none; color:white; }
-a:focus { text-decoration: none; color:white; }
-a:hover, a:active { text-decoration: none; color:white }
 
 .hidden {
   display: none;
+}
+
+
+.container {
+  // undo milligram's default to allow menus to work
+  position: static;
+}
+
+.navbar {
+  padding-bottom: 2.0rem;
+}
+.navbar ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.navbar ul li {
+  font: bold 12px/18px sans-serif;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 20px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  margin-bottom: 0.0rem;
+}
+.navbar ul li:hover {
+  background: #555;
+  color: #fff;
+}
+.navbar ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+.navbar ul li ul li {
+  background: #555;
+  display: block;
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
+}
+.navbar ul li ul li:hover { background: #666; }
+.navbar ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
 }

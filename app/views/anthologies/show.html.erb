@@ -1,11 +1,22 @@
-<h2>The <%= @anthology.name %> Anthology</h2>
+<div class="row">
+  <div class="column">
+    <h2>The <%= @anthology.name %> Anthology</h2>
+  </div>
+</div>
 
-<div>
-  Published by <%= @anthology.publisher %>.
-  <br>
-  <% comic = @anthology.comics.first %>
-  Features <%= comic.name %>.
-  <br>
-  <%= link_to image_tag(comic.artworks.first.file, alt: comic.name, height: '200'),
-      comic_path(comic) %>
+<% comic = @anthology.comics.first %>
+
+<div class="row">
+  <div class="column">
+    Published by <%= @anthology.publisher %>.
+    <br>
+    Features <%= link_to comic.name, comic_path(comic) %>.
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <%= link_to image_tag(comic.artworks.first.file, alt: comic.name, height: '200'),
+        comic_path(comic) %>
+  </div>
 </div>

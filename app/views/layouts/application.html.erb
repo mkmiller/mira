@@ -9,15 +9,15 @@
   </head>
 
   <body>
-    <div class='nav-wrapper'>
-      <nav class='nav-menu'>
-        <ul class='clearfix'>
+    <div class='container navbar'>
+      <nav>
+        <ul>
           <li>
             <%= link_to 'MIRA', root_path %>
           </li>
-          <li class='dropdown'>
+          <li>
             <%= link_to 'Comics', comics_path %>
-            <ul class='sub-menu' style='margin-left: -8em;'>
+            <ul>
               <% Comic.all.each do |comic| %>
                 <li>
                   <%= link_to comic.name, comic_path(comic) %>
@@ -25,9 +25,9 @@
               <% end %>
             </ul>
           </li>
-          <li class='dropdown'>
+          <li>
             <%= link_to 'Webcomics', web_comics_path %>
-            <ul class='sub-menu'>
+            <ul>
               <% WebComic.all.each do |comic| %>
                 <li>
                   <%= link_to comic.name, web_comic_path(comic.id) %>
@@ -35,9 +35,9 @@
               <% end %>
             </ul>
           </li>
-          <li class='dropdown'>
+          <li>
             <%= link_to 'Anthologies', anthologies_path %>
-            <ul class='sub-menu'>
+            <ul>
               <% Anthology.all.each do |anthology| %>
                 <li>
                   <%= link_to "The #{anthology.name} Anthology", anthology_path(anthology) %>
@@ -55,6 +55,8 @@
       </nav>
     </div>
 
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

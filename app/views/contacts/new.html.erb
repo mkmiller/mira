@@ -1,25 +1,49 @@
-<h2>Have something to say?</h2>
+<div class="row">
+  <div class="column">
+    <h2>Have something to say?</h2>
+  </div>
+</div>
 
-<div>
-  <%= form_for @contact do |f| %>
-    <%= f.label :name %><br>
-    <%= f.text_field :name, required: true %><br>
-
-    <br>
-
-    <%= f.label :email %><br>
-    <%= f.text_field :email, required: true %><br>
-
-    <br>
-
-    <%= f.label :message %><br>
-    <%= f.text_area :message, as: :text %><br>
-
-    <div class='hidden'>
-      <%= f.label :nickname %><br>
-      <%= f.text_field :nickname, hint: 'leave blank' %><br>
+<%= form_for @contact do |f| %>
+  <div class="row">
+    <div class="column column-20">
+      <%= f.label :name %>
     </div>
 
-    <%= f.submit 'Send Message', class: 'button' %>
-  <% end %>
-</div>
+    <div class="column">
+      <%= f.text_field :name, required: true %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column column-20">
+      <%= f.label :email %>
+    </div>
+
+    <div class="column">
+      <%= f.text_field :email, required: true %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column column-20">
+      <%= f.label :message %>
+    </div>
+
+    <div class="column">
+      <%= f.text_area :message, as: :text %>
+    </div>
+  </div>
+
+  <div class="row; hidden">
+    <%= f.label :nickname %><br>
+    <%= f.text_field :nickname, hint: 'leave blank' %><br>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <%= f.submit 'Send Message', class: 'button' %>
+    </div>
+  </div>
+
+<% end %>

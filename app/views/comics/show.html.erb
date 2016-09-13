@@ -1,30 +1,36 @@
-<h2><%= @comic.name %></h2>
-<div>
-  Published by <%= @comic.publisher %>.
-  <% if @comic.anthology.present? %>
-    <br>
-    Featured in the <%= @comic.anthology.name %> Anthology.
-  <% end %>
-</div>
-<br>
-<% if @comic.artworks.present? %>
-  <div>
-    <% @comic.artworks.each do |artwork| %>
-      <%= image_tag(artwork.file, height: '350') %>
-    <% end %>
+<div class="row">
+  <div class="column">
+    <h2><%= @comic.name %></h2>
   </div>
-  <br>
-<% end %>
-<div>
-  Mira contributed as a <%= @comic.role %>.
 </div>
-<br>
-<div>
-  <% if @comic.products.present? %>
-  BUY:
+
+<div class="row">
+  <% if @comic.artworks.present? %>
+    <% @comic.artworks.each do |artwork| %>
+      <div class="column column-25">
+        <%= image_tag(artwork.file, height: '350') %>
+      </div>
+    <% end %>
   <% end %>
-  <% @comic.products.each do |product| %>
-    <%= link_to image_tag(product.vendor.file, alt: product.vendor.name, height: '32'),
-        product.url %>
-  <% end %>
+  <div class="column">
+    Published by <%= @comic.publisher %>.
+    <% if @comic.anthology.present? %>
+      <br>
+      Featured in the <%= link_to @comic.anthology.name + 'Anthology', anthology_path(@comic.anthology) %>.
+    <% end %>
+    <br>
+    Mira contributed as a <%= @comic.role %>.
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <% if @comic.products.present? %>
+      <span style="line-height: 32px; vertical-align: middle">BUY:</span>
+    <% end %>
+    <% @comic.products.each do |product| %>
+      <%= link_to image_tag(product.vendor.file, alt: product.vendor.name, height: '32', style: 'vertical-align: middle'),
+          product.url %>
+      <% end %>
+  </div>
 </div>
