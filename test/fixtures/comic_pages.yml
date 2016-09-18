@@ -1,0 +1,9 @@
+comic_page_one:
+  number: 1
+  artwork: artwork_one
+  web_comic: web_comic_one
+
+comic_page_two:
+  number: 2
+  artwork: artwork_two
+  web_comic: web_comic_one

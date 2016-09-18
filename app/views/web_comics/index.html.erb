@@ -3,3 +3,14 @@
     <h2>Web Comics</h2>
   </div>
 </div>
+
+<div class="row">
+  <div class="column">
+    <% @web_comics.each do |web_comic| %>
+      <% if web_comic.files.first.present? %>
+        <%= link_to image_tag(web_comic.files.first, alt: web_comic.name, height: '200'),
+            web_comic_path(web_comic) %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

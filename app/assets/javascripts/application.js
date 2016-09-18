@@ -15,8 +15,4 @@
 
 window.$ = window.jQuery = require('jquery');
 require('jquery-ujs');
-
-var slick = require('slick-carousel-browserify');
-$(document).ready(function(){
-    slick($('.slick-test') );
-});
+require('web_comics')

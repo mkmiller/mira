@@ -30,7 +30,7 @@
             <ul>
               <% WebComic.all.each do |comic| %>
                 <li>
-                  <%= link_to comic.name, web_comic_path(comic.id) %>
+                  <%= link_to comic.name, web_comic_path(comic) %>
                 </li>
               <% end %>
             </ul>

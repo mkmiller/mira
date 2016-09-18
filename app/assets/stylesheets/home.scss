@@ -6,7 +6,7 @@ a { text-decoration: none; color: #9b4dca;}
 a:visited { text-decoration: none; color: #9b4dca; }
 
 a:hover, a:focus, a:active {
-  color: #FFF;
+  color: #555;
 }
 
 .hidden {
@@ -48,7 +48,7 @@ a:hover, a:focus, a:active {
   margin-bottom: 0.0rem;
 }
 .navbar ul li:hover {
-  background: #555;
+  background: #AAA;
   color: #fff;
 }
 .navbar ul li ul {
@@ -70,12 +70,12 @@ a:hover, a:focus, a:active {
   -transition: opacity 0.2s;
 }
 .navbar ul li ul li {
-  background: #555;
+  background: #AAA;
   display: block;
   color: #fff;
   text-shadow: 0 -1px 0 #000;
 }
-.navbar ul li ul li:hover { background: #666; }
+.navbar ul li ul li:hover { background: #BBB; }
 .navbar ul li:hover ul {
   display: block;
   opacity: 1;

@@ -1,5 +1,16 @@
 <div class="row">
   <div class="column">
     <h2><%= @web_comic.name %></h2>
+    <%= @files %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class='web-comic' style="width: 400px;">
+      <% @web_comic.files.each do |file| %>
+        <div><%= image_tag(file) %></div>
+      <% end %>
+    </div>
   </div>
 </div>

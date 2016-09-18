@@ -1,29 +1,17 @@
-# Web comic model, faked
-class WebComic
-  include ActiveModel::Model
+# Web comic model
+class WebComic < ApplicationRecord
+  extend FriendlyId
+  friendly_id :name, use: :slugged
 
-  @@comics = []
+  validates :name, :slug, presence: true
 
-  attr_accessor :id, :name
+  has_many :comic_pages
 
-  def self.all
-    @@comics
+  def artworks
+    comic_pages.numerical.map(&:artwork)
   end
 
-  def self.find(id)
-    id = id.to_i
-    @@comics.drop_while { |comic| comic.id != id }.first
+  def files
+    artworks.map(&:file)
   end
-
-  def self.register(comic)
-    @@comics << comic
-  end
-end
-
-[
-  { id: 1, name: 'WebComic A' },
-  { id: 2, name: 'WebComic B' },
-  { id: 3, name: 'WebComic C' }
-].each do |hash|
-  WebComic.register WebComic.new(hash)
 end

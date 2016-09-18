@@ -1,0 +1,5 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+web_comic_one:
+  name: WebComic
+  slug: web-comic
